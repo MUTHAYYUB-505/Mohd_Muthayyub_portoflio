@@ -146,23 +146,7 @@ nav a{
   margin-bottom:15px;
 }
 
-/* ===== SKILLS ===== */
-.skills{
-  background:#0b1325;
-}
 
-.skills-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:30px;
-}
-
-.skill{
-  background:var(--card);
-  padding:35px;
-  border-radius:16px;
-  border-left:4px solid var(--accent);
-}
 
 /* ===== PROJECTS ===== */
 .projects{
@@ -172,12 +156,12 @@ nav a{
 .projects-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:35px;
+  gap:20px;
 }
 
 .project{
   background:var(--card);
-  border-radius:22px;
+  border-radius:20px;
   overflow:hidden;
 }
 
@@ -188,7 +172,7 @@ nav a{
 }
 
 .project-body{
-  padding:25px;
+  padding:30px;
 }
 
 .project-body span{
@@ -330,6 +314,73 @@ footer{
   </div>
 </section>
 
+<style>
+  /* ===== SKILLS ===== */
+  .skills{
+    background: #0b1325;
+    color: #fff;
+    padding: 80px 20px;
+  }
+
+  .section-header h2{
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #fff;
+    text-align: center;
+  }
+
+  .section-header p{
+    font-size: 16px;
+    color: #aaa;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .skills-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .skill{
+    background: #1c2541;
+    padding: 30px 20px;
+    border-radius: 16px;
+    border-left: 4px solid #007bff; /* accent color */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: default;
+  }
+
+  .skill:hover{
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    border-left-color: #00d4ff; /* highlight on hover */
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 600px){
+    .skills-grid{
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .section-header h2{
+      font-size: 28px;
+    }
+
+    .skill{
+      font-size: 16px;
+      padding: 25px 15px;
+    }
+  }
+</style>
+
 <!-- PROJECTS -->
 <section id="projects" class="section projects">
   <div class="section-header">
@@ -342,41 +393,115 @@ footer{
     <div class="project">
       <img src="https://images.unsplash.com/photo-1556155092-8707de31f9c4">
       <div class="project-body">
-        <h3>Sales Performance Dashboard</h3>
+        <h3>
+          Sales Performance Dashboard
+          <span class="toggle-arrow" onclick="toggleSummary(this)">&#9660;</span>
+        </h3>
         <p>Revenue, growth trends, and regional analysis.</p>
         <span>Power BI • SQL</span>
+        <p class="project-summary">
+          Designed and implemented a comprehensive Sales Performance Dashboard with interactive visualizations in Power BI and SQL-based data extraction. Enabled stakeholders to track revenue, growth trends, and regional performance for informed decision-making.
+        </p>
       </div>
     </div>
 
     <div class="project">
       <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7">
       <div class="project-body">
-        <h3>Financial KPI Analysis</h3>
+        <h3>
+          Financial KPI Analysis
+          <span class="toggle-arrow" onclick="toggleSummary(this)">&#9660;</span>
+        </h3>
         <p>Profitability, margins, and cost drivers.</p>
         <span>Power BI • Excel</span>
+        <p class="project-summary">
+          Built a Financial KPI Dashboard in Power BI and Excel to monitor profitability, margins, and cost drivers. Provided clear insights for budgeting and performance optimization.
+        </p>
       </div>
     </div>
 
     <div class="project">
       <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a">
       <div class="project-body">
-        <h3>Customer Churn Analysis</h3>
+        <h3>
+          Customer Churn Analysis
+          <span class="toggle-arrow" onclick="toggleSummary(this)">&#9660;</span>
+        </h3>
         <p>Retention insights and segmentation.</p>
         <span>SQL • Power BI</span>
+        <p class="project-summary">
+          Developed a Customer Churn Analysis dashboard using SQL and Power BI, highlighting retention patterns and segmenting customers to inform targeted engagement strategies.
+        </p>
       </div>
     </div>
 
     <div class="project">
       <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
       <div class="project-body">
-        <h3>Operations Efficiency</h3>
+        <h3>
+          Operations Efficiency
+          <span class="toggle-arrow" onclick="toggleSummary(this)">&#9660;</span>
+        </h3>
         <p>Lead time and bottleneck analytics.</p>
         <span>Power BI • SQL</span>
+        <p class="project-summary">
+          Created an Operations Efficiency dashboard to analyze lead times and identify bottlenecks using Power BI and SQL, driving process improvements and operational efficiency.
+        </p>
       </div>
     </div>
 
   </div>
 </section>
+
+<style>
+  .toggle-arrow {
+    cursor: pointer;
+    color: #007bff;
+    margin-left: 8px;
+    font-size: 18px;
+    transition: color 0.3s, transform 0.3s;
+    display: inline-block;
+  }
+
+  .toggle-arrow:hover {
+    color: #0056b3;
+  }
+
+  .toggle-arrow.open {
+    transform: rotate(180deg);
+  }
+
+  .project-summary {
+    height: 0; /* Collapsed by default */
+    overflow: hidden;
+    transition: height 0.5s ease, padding 0.3s ease;
+    padding: 0;
+    font-size: 14px;
+    color: #333;
+  }
+</style>
+
+<script>
+  function toggleSummary(element) {
+    const projectBody = element.closest('.project-body');
+    const summary = projectBody.querySelector('.project-summary');
+
+    if (summary.style.height && summary.style.height !== "0px") {
+      // Collapse
+      summary.style.height = "0";
+      summary.style.padding = "0";
+      element.classList.remove('open');
+    } else {
+      // Expand to full height
+      const fullHeight = summary.scrollHeight + "px";
+      summary.style.height = fullHeight;
+      summary.style.padding = "10px 0";
+      element.classList.add('open');
+    }
+  }
+</script>
+
+
 
 <!-- EXPERIENCE -->
 <!-- EXPERIENCE -->
