@@ -1,242 +1,450 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Muthayyub Mohd — Automation & BMS Engineer</title>
-  <meta name="description" content="Portfolio — Muthayyub Mohd, Automation & BMS Engineer. EPMS, PLCs, Survalent SCADA, Moxa, Schneider, Aramco Data Centre." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --accent:#0ea5a4;
-      --bg:#ffffff;
-      --muted:#6b7280;
-      --card:#f8fafc;
-      --glass: rgba(14,165,164,0.06);
-      --max-width:1100px;
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;background:var(--bg);color:#0f172a}
-    .container{max-width:var(--max-width);margin:28px auto;padding:28px}
-    header{display:flex;gap:20px;align-items:center}
-    .avatar{width:120px;height:120px;border-radius:16px;overflow:hidden;flex:0 0 120px;box-shadow:0 6px 20px rgba(2,6,23,0.08)}
-    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
-    .hero{flex:1}
-    h1{margin:0;font-size:28px;letter-spacing:-0.2px}
-    .title{color:var(--muted);margin-top:6px}
-    .top-actions{display:flex;gap:12px;margin-top:12px}
-    .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:8px;box-shadow:0 6px 18px rgba(14,165,164,0.14)}
-    .btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(14,165,164,0.12);box-shadow:none}
+<meta charset="UTF-8">
+<title>Data Analyst | BI Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    main{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:28px}
-    .card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 6px 24px rgba(2,6,23,0.04)}
-    section h2{margin:0 0 12px 0;font-size:16px}
+<style>
+:root{
+  --bg:#0e1628;
+  --bg2:#111c33;
+  --card:#16213e;
+  --accent:#4fd1c5;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+}
 
-    .about p{margin:0;color:var(--muted);line-height:1.6}
-    .skills{display:flex;flex-wrap:wrap;gap:8px}
-    .skill{background:var(--glass);padding:8px 10px;border-radius:8px;font-weight:600;font-size:13px}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Inter","Segoe UI",Arial,sans-serif;
+}
 
-    .projects .project{padding:12px;border-radius:10px;background:white;margin-bottom:12px;display:block;text-decoration:none;color:inherit;border:1px solid rgba(2,6,23,0.03)}
-    .project .meta{display:flex;justify-content:space-between;align-items:center}
-    .project p{margin:8px 0 0 0;color:var(--muted);font-size:14px}
+body{
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
+}
 
-    .timeline{display:flex;flex-direction:column;gap:12px}
-    .job{background:white;padding:12px;border-radius:10px;border:1px solid rgba(2,6,23,0.03)}
-    .job .role{font-weight:700}
-    .job .company{color:var(--muted);font-size:13px}
+/* ===== NAV ===== */
+nav{
+  position:fixed;
+  width:100%;
+  top:0;
+  background:rgba(14,22,40,.95);
+  backdrop-filter:blur(8px);
+  padding:18px 70px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:999;
+}
 
-    .contact-card{position:sticky;top:28px}
-    .contact-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
-    .contact-list li{display:flex;gap:10px;align-items:center}
-    .muted{color:var(--muted)}
+nav h2{color:var(--accent);}
 
-    footer{text-align:center;margin-top:28px;color:var(--muted);font-size:13px}
+nav ul{
+  list-style:none;
+  display:flex;
+}
 
-    @media (max-width:980px){main{grid-template-columns:1fr;}.avatar{width:96px;height:96px} .top-actions{flex-wrap:wrap}}
+nav li{margin-left:32px;}
+nav a{
+  color:var(--text);
+  text-decoration:none;
+  font-size:14px;
+}
 
-    .fade-up{transform:translateY(6px);opacity:0;animation:fadeUp 520ms ease forwards}
-    @keyframes fadeUp{to{transform:none;opacity:1}}
-  </style>
+/* ===== HERO ===== */
+.hero{
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(14,22,40,.9),rgba(14,22,40,.95)),
+    url("https://images.unsplash.com/photo-1551288049-bebda4e38f71");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  padding:0 80px;
+}
+
+.hero-content{
+  max-width:750px;
+}
+
+.hero h1{
+  font-size:54px;
+  margin-bottom:15px;
+}
+
+.hero span{color:var(--accent);}
+
+.hero p{
+  font-size:20px;
+  color:var(--muted);
+}
+
+.hero-stats{
+  display:flex;
+  gap:40px;
+  margin-top:35px;
+}
+
+.stat h3{color:var(--accent);}
+.stat p{font-size:13px;color:var(--muted);}
+
+.btn{
+  display:inline-block;
+  margin-top:40px;
+  padding:15px 42px;
+  background:var(--accent);
+  color:#021f2d;
+  font-weight:600;
+  border-radius:10px;
+  text-decoration:none;
+}
+
+/* ===== SECTION ===== */
+.section{
+  padding:120px 90px;
+}
+
+.section-header{
+  max-width:700px;
+  margin-bottom:60px;
+}
+
+.section-header h2{
+  font-size:38px;
+}
+
+.section-header p{
+  margin-top:10px;
+  color:var(--muted);
+}
+
+/* ===== ABOUT ===== */
+.about{
+  background:linear-gradient(180deg,var(--bg),var(--bg2));
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:50px;
+}
+
+.about-card{
+  background:var(--card);
+  padding:45px;
+  border-radius:18px;
+}
+
+.about-card h3{
+  color:var(--accent);
+  margin-bottom:15px;
+}
+
+/* ===== SKILLS ===== */
+.skills{
+  background:#0b1325;
+}
+
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+
+.skill{
+  background:var(--card);
+  padding:35px;
+  border-radius:16px;
+  border-left:4px solid var(--accent);
+}
+
+/* ===== PROJECTS ===== */
+.projects{
+  background:linear-gradient(180deg,var(--bg2),var(--bg));
+}
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:40px;
+}
+
+.project{
+  background:var(--card);
+  border-radius:22px;
+  overflow:hidden;
+}
+
+.project img{
+  width:100%;
+  height:210px;
+  object-fit:cover;
+}
+
+.project-body{
+  padding:30px;
+}
+
+.project-body span{
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* ===== EXPERIENCE ===== */
+.experience{
+  background:#0b1325;
+}
+
+.timeline{
+  max-width:900px;
+  border-left:3px solid var(--accent);
+  padding-left:40px;
+}
+
+.timeline-item{
+  background:var(--card);
+  padding:30px;
+  border-radius:16px;
+  margin-bottom:35px;
+}
+
+/* ===== CONTACT ===== */
+.contact{
+  background:linear-gradient(180deg,var(--bg),#020617);
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:35px;
+}
+
+.contact-card{
+  background:var(--card);
+  padding:40px;
+  border-radius:18px;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#020617;
+  color:var(--muted);
+  text-align:center;
+  padding:30px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+  nav{padding:18px 25px;}
+  .section{padding:80px 30px;}
+  .hero{padding:0 30px;}
+  .about-grid{grid-template-columns:1fr;}
+  .hero h1{font-size:42px;}
+}
+</style>
 </head>
+
 <body>
-  <div class="container">
-    <header class="fade-up" style="animation-delay:40ms">
-      <div class="avatar">
-        <!-- Replace src with your photo. Recommended: 600x600 jpg/png -->
-        <img src="./photo.jpg" alt="Muthayyub Mohd">
+
+<nav>
+  <h2>Data Analyst</h2>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1><span>Business Intelligence</span><br>Data Analyst</h1>
+    <p>Transforming enterprise data into actionable insights using SQL, Power BI, and strong business understanding.</p>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <h3>SQL</h3><p>Advanced querying</p>
       </div>
-      <div class="hero">
-        <h1>Muthayyub Mohd</h1>
-        <div class="title">Automation & BMS Engineer — EPMS | PLC | SCADA | Power Monitoring</div>
-        <div class="top-actions">
-          <!-- Replace hrefs with your files/links -->
-          <a class="btn" href="/Muthayyub_Mohd_CV.pdf" download>Download CV</a>
-          <a class="btn ghost" href="https://www.linkedin.com/in/mohd-muthayyub" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
+      <div class="stat">
+        <h3>Power BI</h3><p>Executive dashboards</p>
       </div>
-    </header>
-
-    <main>
-      <div>
-        <section class="card about fade-up" style="animation-delay:80ms">
-          <h2>About</h2>
-          <p>Automation engineer currently working on the Aramco Data Centre — EPMS project in Dhahran. Experienced in Schneider M580 PLCs, Survalent SCADA, MOXA communication devices, power monitoring (PME), and switchgear integration. I design and implement EPMS/BMS solutions, perform system testing, and deliver commissioning & HMI/SCADA configurations.</p>
-        </section>
-
-        <section class="card skills fade-up" style="margin-top:16px;animation-delay:120ms">
-          <h2>Technical skills</h2>
-          <div class="skills">
-            <div class="skill">Schneider M580</div>
-            <div class="skill">Survalent SCADA</div>
-            <div class="skill">EPMS / PME</div>
-            <div class="skill">PLC Programming</div>
-            <div class="skill">MOXA & Serial Comms</div>
-            <div class="skill">Power Monitoring</div>
-            <div class="skill">SQL & Databases</div>
-            <div class="skill">BMS / HVAC Integration</div>
-            <div class="skill">HMI Design</div>
-            <div class="skill">Network Troubleshooting</div>
-          </div>
-        </section>
-
-        <section class="card projects fade-up" style="margin-top:16px;animation-delay:160ms">
-          <h2>Projects (selected)</h2>
-
-          <a class="project" href="#project-epms" id="project-epms">
-            <div class="meta">
-              <div>
-                <strong>EPMS Upgrade — Aramco Data Centre, Dhahran</strong>
-                <div class="muted">EPMS integration, PLC migration, Survalent HMI & PME</div>
-              </div>
-              <div class="muted">2024 — 2025</div>
-            </div>
-            <p>Led the migration from legacy CRA systems to Schneider M580-based EPMS. Responsibilities included PLC code development, SCADA tagging & HMI design, MOXA serial/Ethernet bridging, and commissioning of power monitoring. Delivered on-time handover with comprehensive test reports.</p>
-          </a>
-
-          <a class="project" href="#project-switchgear" id="project-switchgear">
-            <div class="meta">
-              <div>
-                <strong>Switchgear Integration & PME Deployment</strong>
-                <div class="muted">Switchgear interfacing, PME configuration</div>
-              </div>
-              <div class="muted">2023</div>
-            </div>
-            <p>Implemented PME (Power Monitoring) across switchgear panels, configured Modbus and IEC61850 mappings, and validated energy metering accuracy against site instruments.</p>
-          </a>
-
-          <a class="project" href="#project-bms" id="project-bms">
-            <div class="meta">
-              <div>
-                <strong>BMS Integration — HVAC & Fire Systems</strong>
-                <div class="muted">BMS-EPMS coordination, BACnet/IP bridging</div>
-              </div>
-              <div class="muted">2022</div>
-            </div>
-            <p>Integrated HVAC and fire detection subsystems with central BMS and coordinated alarm routing into Survalent SCADA. Performed loop checks and sequence validation during commissioning.</p>
-          </a>
-
-        </section>
-
-        <section class="card experience fade-up" style="margin-top:16px;animation-delay:200ms">
-          <h2>Experience</h2>
-          <div class="timeline">
-            <div class="job">
-              <div class="role">Automation Engineer</div>
-              <div class="company">Aramco Data Centre — Dhahran</div>
-              <div class="muted">2024 — Present</div>
-              <p class="muted">Working on EPMS implementation using Schneider M580 PLCs, Survalent SCADA, PME, and MOXA devices. Responsible for PLC programming, SCADA/HMI configuration, commissioning, and testing.</p>
-            </div>
-
-            <div class="job">
-              <div class="role">BMS/Controls Engineer</div>
-              <div class="company">MAES / Contract</div>
-              <div class="muted">2021 — 2024</div>
-              <p class="muted">Delivered BMS and HVAC integration projects, developed DDC logic, and performed field testing and troubleshooting.</p>
-            </div>
-
-            <div class="job">
-              <div class="role">Junior Automation Engineer</div>
-              <div class="company">Various EPC Projects</div>
-              <div class="muted">2019 — 2021</div>
-              <p class="muted">Assisted in PLC programming, site installations, and performed documentation for project handovers.</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="card education fade-up" style="margin-top:16px;animation-delay:240ms">
-          <h2>Education & Certifications</h2>
-          <div style="display:flex;flex-direction:column;gap:8px">
-            <div>
-              <strong>B.Tech — Electronics & Communication Engineering</strong>
-              <div class="muted">University — Year</div>
-            </div>
-            <div>
-              <strong>Certifications</strong>
-              <div class="muted">Survalent SCADA — Basic (training), Schneider PLC Essentials, Power Monitoring (PME) Workshop</div>
-            </div>
-          </div>
-        </section>
-
+      <div class="stat">
+        <h3>Business</h3><p>KPI & strategy</p>
       </div>
+    </div>
 
-      <aside class="contact-card">
-        <section class="card fade-up" style="animation-delay:280ms">
-          <h2>Contact</h2>
-          <ul class="contact-list">
-            <li><strong>Email:</strong><span class="muted"> &nbsp; your.email@example.com</span></li>
-            <li><strong>Phone:</strong><span class="muted"> &nbsp; +966-5X-XXX-XXXX</span></li>
-            <li><strong>Location:</strong><span class="muted"> &nbsp; Dhahran, Saudi Arabia</span></li>
-            <li><strong>LinkedIn:</strong><a class="muted" href="https://www.linkedin.com/in/mohd-muthayyub" target="_blank"> &nbsp; /in/mohd-muthayyub</a></li>
-          </ul>
+    <a href="#projects" class="btn">View Projects</a>
+  </div>
+</section>
 
-          <div style="margin-top:12px;display:flex;gap:8px">
-            <a class="btn" href="/Muthayyub_Mohd_CV.pdf" download>Download CV</a>
-            <a class="btn ghost" href="mailto:your.email@example.com">Email me</a>
-          </div>
-        </section>
+<!-- ABOUT -->
+<section id="about" class="section about">
+  <div class="section-header">
+    <h2>About Me</h2>
+    <p>Business-focused analytics professional</p>
+  </div>
 
-        <section class="card fade-up" style="margin-top:16px;animation-delay:320ms">
-          <h2>Quick links</h2>
-          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px">
-            <li><a href="#project-epms">EPMS Upgrade — Aramco</a></li>
-            <li><a href="#project-switchgear">Switchgear Integration</a></li>
-            <li><a href="#project-bms">BMS Integration</a></li>
-          </ul>
-        </section>
+  <div class="about-grid">
+    <div class="about-card">
+      <h3>Who I Am</h3>
+      <p>
+        I am a Data Analyst with strong experience in SQL, Power BI, and business intelligence.
+        I specialize in building dashboards that help leadership understand performance,
+        risks, and opportunities.
+      </p>
+    </div>
 
-      </aside>
-    </main>
+    <div class="about-card">
+      <h3>What I Deliver</h3>
+      <ul>
+        <li>✔ KPI-driven dashboards</li>
+        <li>✔ Finance, sales & operations analytics</li>
+        <li>✔ Decision-ready insights</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <footer>
-      <div class="muted">© Muthayyub Mohd — Automation & BMS Engineer. Built with HTML & CSS.</div>
-    </footer>
+<!-- SKILLS -->
+<section id="skills" class="section skills">
+  <div class="section-header">
+    <h2>Core Skills</h2>
+    <p>Tools and competencies used in enterprise BI environments</p>
+  </div>
 
-    <script>
-      // Small helper: replace placeholders with user-provided data if present in URL params
-      (function(){
-        const params = new URLSearchParams(location.search);
-        const email = params.get('email');
-        const phone = params.get('phone');
-        const photo = params.get('photo');
-        if(email){
-          const nodes = document.querySelectorAll('.contact-list .muted');
-          if(nodes[0]) nodes[0].textContent = ' \u00A0 ' + email;
-          const mailBtns = document.querySelectorAll('a[href^="mailto:"]');
-          if(mailBtns[0]) mailBtns[0].href = 'mailto:' + email;
-        }
-        if(phone){
-          const nodes = document.querySelectorAll('.contact-list .muted');
-          if(nodes[1]) nodes[1].textContent = ' \u00A0 ' + phone;
-        }
-        if(photo){
-          const img = document.querySelector('.avatar img'); if(img) img.src = photo;
-        }
-      })()
-    </script>
+  <div class="skills-grid">
+    <div class="skill">SQL & Data Modeling</div>
+    <div class="skill">Power BI & DAX</div>
+    <div class="skill">Business Analysis</div>
+    <div class="skill">KPI Design</div>
+    <div class="skill">Excel & Reporting</div>
+    <div class="skill">Python (Analytics)</div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section projects">
+  <div class="section-header">
+    <h2>Projects</h2>
+    <p>Representative BI use cases (sample projects)</p>
+  </div>
+
+  <div class="projects-grid">
+
+    <div class="project">
+      <img src="https://images.unsplash.com/photo-1556155092-8707de31f9c4">
+      <div class="project-body">
+        <h3>Sales Performance Dashboard</h3>
+        <p>Revenue, growth trends, and regional analysis.</p>
+        <span>Power BI • SQL</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7">
+      <div class="project-body">
+        <h3>Financial KPI Analysis</h3>
+        <p>Profitability, margins, and cost drivers.</p>
+        <span>Power BI • Excel</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a">
+      <div class="project-body">
+        <h3>Customer Churn Analysis</h3>
+        <p>Retention insights and segmentation.</p>
+        <span>SQL • Power BI</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+      <div class="project-body">
+        <h3>Operations Efficiency</h3>
+        <p>Lead time and bottleneck analytics.</p>
+        <span>Power BI • SQL</span>
+      </div>
+    </div>
 
   </div>
+</section>
+
+<!-- EXPERIENCE -->
+<!-- EXPERIENCE -->
+<section id="experience" class="section experience">
+    <div class="section-header">
+      <h2>Experience & Education</h2>
+      <p>Enterprise analytics experience across banking and energy domains</p>
+    </div>
+  
+    <div class="timeline">
+  
+      <div class="timeline-item">
+        <h4>Data Analyst – Accenture</h4>
+        <span style="color:#9ca3af;font-size:13px;">Client: Bank of Ireland</span>
+        <p>
+          Worked as a Data Analyst supporting banking monitoring and historical reporting.
+          Designed and developed Power BI dashboards for performance tracking, trend analysis,
+          and management reporting. Built SQL-based data models to support KPI monitoring,
+          ensured data accuracy, and collaborated with stakeholders to deliver actionable insights
+          for business decision-making.
+        </p>
+      </div>
+  
+      <div class="timeline-item">
+        <h4>Energy Data Analyst – Saudi Aramco</h4>
+        <span style="color:#9ca3af;font-size:13px;">Data Center Operations | KSA</span>
+        <p>
+          Delivered real-time and historical energy monitoring dashboards using
+          Power Monitoring Expert (PME) for Saudi Aramco data center operations.
+          Monitored power consumption, load trends, energy efficiency, and system health.
+          Supported operational reliability and energy optimization through data-driven insights.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <h4>Education</h4>
+        <p>
+          Master's Degree in Computer Applications <br>
+          Strong academic foundation in data analysis, databases, and business intelligence concepts.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <h4>Education</h4>
+        <p>
+          Bachelor’s Degree in Electronis and Communication Engineering<br>
+          Strong academic foundation in data analysis, databases, and business intelligence concepts.
+        </p>
+      </div>
+  
+    </div>
+  </section>
+  
+
+<!-- CONTACT -->
+<section id="contact" class="section contact">
+  <div class="section-header">
+    <h2>Contact</h2>
+    <p>Let’s connect for data-driven opportunities</p>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-card"><b>Email</b><br>yourname@email.com</div>
+    <div class="contact-card"><b>LinkedIn</b><br>linkedin.com/in/yourprofile</div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Data Analyst Portfolio
+</footer>
+
 </body>
 </html>
